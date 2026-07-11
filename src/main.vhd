@@ -8,10 +8,17 @@ entity main is
         RST : in std_logic;
         CLK : in std_logic;
 
-        --to VGAport
-        ----from DAC
-        ----from VGA-ctrl
-
+        --USER to VGAport
+        ----USER-VGA-ctrl > DAC > VGAport
+        VGA_RED : out std_logic_vector(7 downto 0);
+        VGA_GREEN : out std_logic_vector(7 downto 0);
+        VGA_BLUE : out std_logic_vector(7 downto 0);
+        VGA_25CLK : out std_logic;
+        VGA_SYNC_N : out std_logic;
+        VGA_BLANK_N : out std_logic;
+        ----USER-VGA-ctrl > VGAport
+        VGA_VS : out std_logic;
+        VGA_HS : out std_logic
     );
 end main;
 
