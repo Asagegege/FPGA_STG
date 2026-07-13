@@ -5,6 +5,7 @@ use IEEE.numeric_std.all;
 
 entity main is
     port(
+        --from board
         RST : in std_logic;
         CLK : in std_logic;
 
